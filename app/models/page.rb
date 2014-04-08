@@ -6,4 +6,5 @@ class Page < ActiveFedora::Base
   has_attributes :number, datastream: 'descMetadata', multiple: false
   has_attributes :text, datastream: 'descMetadata', multiple: false
 
+  has_file_datastream "pageContent"
 end
