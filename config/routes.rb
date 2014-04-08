@@ -1,5 +1,6 @@
 HydraCamp::Application.routes.draw do
   resources :books
+  resources :pages
 
   root :to => "catalog#index"
   Blacklight.add_routes(self)
