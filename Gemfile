@@ -43,7 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'hydra', require: 'hydra6'
+gem 'hydra'
 
 gem "bootstrap-sass"
 gem "devise"
