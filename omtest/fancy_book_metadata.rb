@@ -3,7 +3,7 @@ class FancyBookMetadata
   include OM::XML::Document
 
   set_terminology do |t|
-    t.root(:path=>"fields")
+    t.root(:path=>"mods", :xmlns=>"http://www.loc.gov/mods/v3")
     t.title {
       t.language(:path=>{:attribute=>"lang"})
     }
@@ -23,6 +23,6 @@ class FancyBookMetadata
   # This method is called when you create new XML documents from scratch.
   # It must return a Nokogiri::Document.  Other than that, you can make your "default" documents look however you want.
   def self.xml_template
-    Nokogiri::XML.parse("<fields/>")
+    Nokogiri::XML.parse('<mods xmlns="http://www.loc.gov/mods/v3"/>')
   end
 end
