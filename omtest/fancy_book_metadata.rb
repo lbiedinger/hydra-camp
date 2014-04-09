@@ -10,11 +10,12 @@ class FancyBookMetadata
 
     # The underscore is purely to avoid namespace conflicts.
     t.name_ {
-      t.family_name(:path=>"familyName")
-      t.given_name(:path=>"givenName")
+      t.namePart
+      t.family_name(:path=>"namePart", :attributes=>{:type=>"family"})
+      t.given_name(:path=>"namePart", :attributes=>{:type=>"given"})
       t.role {
-        t.text
-        t.code
+        t.text(:path=>"roleTerm",:attributes=>{:type=>"text"})
+        t.code(:path=>"roleTerm",:attributes=>{:type=>"code"})
       }
     }
   end
